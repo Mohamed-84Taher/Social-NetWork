@@ -1,0 +1,15 @@
+import { REMOVE_ALERT, SET_ALERT } from "../actions/types";
+
+
+const initState=[];
+
+export default function alert(state=initState,{type,payload}){
+    switch(type){
+     case SET_ALERT:
+         return [...state,payload]
+    case REMOVE_ALERT:
+        return state.filter(alert=>alert.id !==payload)
+    default:
+        return state
+    }
+}
