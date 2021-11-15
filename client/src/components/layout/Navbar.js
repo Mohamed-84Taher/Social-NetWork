@@ -47,7 +47,7 @@ function Navbar() {
         <nav className="navbar bg-dark">
         <h1>
           <Link to="/">
-            <i className="fas fa-code" /> DevConnector
+          <i class="fas fa-chart-network"></i>Social Network
           </Link>
         </h1>
      {
