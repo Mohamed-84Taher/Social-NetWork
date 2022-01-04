@@ -16,6 +16,7 @@ import PrivateRoute from './components/routing/PrivateRoute';
 import { loadUser } from './redux/actions/auth';
 import setAuthToken from './utils/setAuthToken';
 import Posts from './components/posts/Posts';
+import Post from './components/post/Post';
 
 if(localStorage.token){
   setAuthToken(localStorage.token)
@@ -42,6 +43,7 @@ function App() {
           <PrivateRoute exact path='/add-experience' component={AddExperience} />
           <PrivateRoute exact path='/add-education' component={AddEducation} />
           <PrivateRoute exact path='/posts' component={Posts} />
+          <PrivateRoute exact path='/posts/:id' component={Post} />
         </Switch>
       </section>
     </Fragment>
